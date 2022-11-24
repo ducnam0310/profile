@@ -16,12 +16,14 @@ navItems.forEach(navItem => {
 
 // Skills
 const mySkills = [
-    { name: "C# NET", percent: "60%" },
+    { name: "C# NET", percent: "75%" },
+    { name: "ASP.NET MVC", percent: "75%" },
     { name: "SQL", percent: "40%" },
-    { name: "HTML, CSS", percent: "50%" },
+    { name: "Entity Framework", percent: "70%" },
+    { name: "HTML, CSS, JavaScript", percent: "60%" },
     { name: "JQuery", percent: "70%" },
     { name: "VueJS", percent: "45%" },
-    { name: "ReactJS", percent: "40%" },
+    { name: "Git", percent: "60%" },
 ]
 
 mySkills.forEach(skill => { 
@@ -30,8 +32,25 @@ mySkills.forEach(skill => {
             <h5>${skill.name}</h5>
             <div class="progress">
                 <div class="progress-in" style="width: ${skill.percent};"></div>
-                <div class="skill-percent">${skill.percent}</div>
             </div>
+        </div>
+    `;
+});
+
+// Experiances
+const myExperiances = [
+    { title: "Master in Computer Science", description: "", period: "2018 - 2020" }
+];
+
+myExperiances.forEach(experiance => {
+    document.querySelector(".experience .timeline").innerHTML += `
+        <div class="timeline-item">
+            <div class="circle-dot"></div>
+            <h3 class="timeline-date">
+                <i class="fa fa-calendar"></i> ${experiance.period}
+            </h3>
+            <h4 class="timeline-title">${experiance.title}</h4>
+            <p class="timeline-text">${experiance.description}</p>
         </div>
     `;
 });
